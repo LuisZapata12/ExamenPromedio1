@@ -24,17 +24,18 @@ namespace ConsoleApp1
             int precioTotal = 0;
             foreach (var producto in productosEnCarrito)
             {
-                precioTotal += producto.Precio;
+                precioTotal += producto.getPrecio();
             }
             return precioTotal;
         }
+
 
         public void MostrarContenido()
         {
             Console.WriteLine("Contenido del Carrito de Compras:");
             foreach (var producto in productosEnCarrito)
             {
-                Console.WriteLine(producto.ObtenerCaracteristicas());
+                Console.WriteLine(producto.getCaracteristicas());
             }
             Console.WriteLine("Precio Total: " + PrecioTotal());
         }
